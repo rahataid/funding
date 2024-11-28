@@ -23,13 +23,25 @@ const EditProfileImage = ({ community, id }) => {
                                             </div>
                                         ))} */}
                                     </div>
-                                    <p>{community?.description}</p>
+                                    <p className="community-description">{community?.description}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <style jsx>{`
+                .community-description {
+                    text-align: justify;
+                    line-height: 1.8;
+                }
+    
+                @media (max-width: 576px) {
+                    .community-description {
+                        font-size: 13px;
+                    }
+                }
+            `}</style>
         </>
     );
 };
